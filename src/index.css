@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: rgb(26, 46, 53);
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(68, 113, 136);
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    border: 0px;
+    background: transparent;
+}
+
+header nav {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 16px 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+header .borderBottom {
+    margin: 16px 0px;
+    width: 100%;
+    border-bottom: 1px solid rgb(234, 240, 245);
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(25, 118, 210);
+}
+
+.sectionBox {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+.sectionBox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-right: 16px;
+    width: 100%;
+}
+
+.sectionBorderLeft {
+    margin: 0px 16px;
+    height: 32px;
+    border-left: 1px solid rgb(234, 240, 245);
+}
+
+.addNewButton {
+    display: flex;
+    justify-content: center;
+    color: rgb(25, 118, 210);
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(25, 118, 210);
+    min-width: 170px;
+    border-radius: 200px;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    border-bottom: 1px solid rgb(234, 240, 245);
+}
+
+th {
+    text-align: start;
+    padding-bottom: 16px;
+}
+
+table p {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    color: rgb(26, 46, 53);
+}
+
+td {
+    border-bottom: 1px solid rgb(234, 240, 245);
+    padding: 20px 0px;
+}
+
+td p {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(68, 113, 136);
+    letter-spacing: 0.4px;
+}
+
+/* Vehicle Edit Form*/
+.formField {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 0px;
+    margin-bottom: 32px;
+}
+
+.formBorderBottom {
+    margin-bottom: 32px;
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    border-bottom: 1px solid rgb(234, 240, 245);
+}
+
+.formField svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 32px;
+    margin-top: 12px;
+    fill: rgb(46, 125, 50);
+}
+
+.formLabel {
+    width: 320px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    padding: 18px 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(68, 113, 136);
+    letter-spacing: 0.15px;
+    border: 1px solid rgb(25, 118, 210);
+    margin-right: 32px;
+}
+
+.formLabel:hover {
+    border: 2px solid rgb(25, 118, 210);
+}
+
+.formLabel:hover .labelIcon {
+    border: 2px solid rgb(25, 118, 210);
+}
+
+.labelIcon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgb(120, 144, 156);
+    border-radius: 50%;
+    padding: 6px;
+    position: relative;
+    margin-right: 16px;
+}
+
+.labelIcon.active {
+    border: 2px solid rgb(25, 118, 210);
+}
+
+.labelIcon .circle {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.labelIcon.active .circle {
+    background: rgb(25, 118, 210);
+}
+
+.formField input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0px;
+    width: 0px;
+}
+
+.vehicleLabel {
+    box-sizing: border-box;
+    border: 1px solid rgb(120, 144, 156);
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    height: 90px;
+    padding: 4px;
+    width: 320px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    transition: border-color 0.2s ease 0s;
+}
+
+.vehicleLabel:hover {
+    border: 1px solid rgb(25, 118, 210);
+    color: rgb(68, 113, 136);
+}
+
+.vehicleLabel.active {
+    border: 1px solid rgb(25, 118, 210);
+    color: rgb(68, 113, 136);
+}
+
+.vehicleLabel div {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px 0px 10px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(68, 113, 136);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicleLabel.active div {
+    background-color: rgb(25, 118, 210);
+    color: rgb(255, 255, 255);
+}
+
+.vehicleLabel svg {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    fill: rgb(120, 144, 156);
+}
+
+.vehicleLabel.active svg {
+    fill: rgb(255, 255, 255);
+}
+
+.vehicleLabel input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0px;
+    width: 0px;
+}
+
+.noIcon {
+    margin-left: 64px;
+    margin-bottom: 32px;
+}
+
+.formField:not(:first-child) > div > svg {
+    fill: rgb(120, 144, 156);
+}
+
+.inputContainer {
+    width: 320px;
+}
+
+.inputWrapper {
+    border-color: rgb(120, 144, 156);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 4px;
+    height: 56px;
+    width: 100%;
+}
+
+.inputWrapper label {
+    font-size: inherit;
+    line-height: 18px;
+    transform: translate(14px, 18px) scale(1);
+    transition: transform 0.2s ease-in-out 0s;
+    letter-spacing: 0.15px;
+    padding: 0px 4px;
+    background-color: white;
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: rgb(68, 113, 136);
+}
+
+.inputWrapper:focus-within label,
+.inputWrapper.hasValue label {
+    font-size: 12px;
+    line-height: 16px;
+    transform: translate(14px, -10px) scale(1);
+    transition: transform 0.2s ease-in-out 0s;
+    z-index: 2;
+}
+
+.inputWrapper:focus-within,
+.inputWrapper:hover {
+    border-width: 2px;
+    border-color: rgb(25, 118, 210);
+}
+
+.inputWrapper input {
+    padding: 0px 16px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(26, 46, 53);
+    letter-spacing: inherit;
+    border: 0px;
+    background: transparent;
+    opacity: 1;
+    outline: none;
+}
+
+.inputContainerTextarea {
+    position: relative;
+    width: 592px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainerTextarea .textareaWrapper {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 4px;
+    height: 132px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.textareaWrapper textarea {
+    padding: 0px 16px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 114px;
+    border: 0px;
+    outline: 0px;
+    background: transparent;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    resize: none;
+    color: rgb(26, 46, 53) !important;
+}
+
+.textareaWrapper label {
+    transform: translate(14px, 18px) scale(1);
+    transition: transform 0.2s ease-in-out 0s;
+    letter-spacing: 0.15px;
+    padding: 0px 4px;
+    background-color: white;
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.textareaWrapper.hasValue,
+.inputWrapper.hasValue {
+    border-color: rgb(25, 118, 210);
+}
+
+.textareaWrapper:focus-within label,
+.textareaWrapper.hasValue label {
+    font-size: 12px;
+    line-height: 16px;
+    transform: translate(14px, -10px) scale(1);
+    transition: transform 0.2s ease-in-out 0s;
+    z-index: 2;
+}
+
+.textareaWrapper textarea::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.textareaWrapper textarea::-webkit-scrollbar-thumb {
+    background: rgb(204, 204, 204);
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 60px;
+}
+
+.textareaWrapper textarea::-webkit-scrollbar-track {
+    background: rgb(245, 245, 245);
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 60px;
+}
